@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordLens Settings</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 300px;
+      background: #0f0f13;
+      color: #e8e6e0;
+      font-family: 'Georgia', serif;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      font-style: italic;
+      color: #f0c060;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #e8e6e0;
+      font-family: monospace;
+      font-size: 12px;
+      padding: 10px 12px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      border-color: rgba(240,192,96,0.4);
+    }
+
+    .hint {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .hint a {
+      color: rgba(240,192,96,0.6);
+      text-decoration: none;
+    }
+
+    .hint a:hover { text-decoration: underline; }
+
+    button {
+      width: 100%;
+      margin-top: 16px;
+      background: rgba(240,192,96,0.12);
+      border: 1px solid rgba(240,192,96,0.25);
+      border-radius: 8px;
+      color: #f0c060;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    button:hover {
+      background: rgba(240,192,96,0.2);
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      min-height: 16px;
+    }
+
+    .status.success { color: #7ecb8f; }
+    .status.error { color: #e07070; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 20px 0;
+    }
+
+    .info {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.6;
+    }
+
+    .info strong { color: rgba(255,255,255,0.4); }
+  </style>
+</head>
+<body>
+  <div class="logo">WordLens</div>
+  <div class="tagline">Instant Meanings</div>
+
+  <label for="apiKey">Groq API Key (Free)</label>
+  <input type="password" id="apiKey" placeholder="gsk_..." autocomplete="off" />
+  <div class="hint">
+    Get your free key at <a href="https://console.groq.com" target="_blank">console.groq.com</a><br>
+    Required for AI-powered explanations. Dictionary works without it.
+  </div>
+
+  <button id="save">Save Settings</button>
+  <div class="status" id="status"></div>
+
+  <hr class="divider">
+
+  <div class="info">
+    <strong>How it works:</strong><br>
+    Select any word or phrase (up to 10 words) on any webpage. A popup appears automatically with:<br><br>
+    • <strong>Dictionary</strong> — definitions, phonetics, examples<br>
+    • <strong>AI Explain</strong> — context-aware explanation via Claude
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
