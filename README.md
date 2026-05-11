@@ -91,20 +91,3 @@ word-meaning-extension/
 ## API Key Security
 
 Your Groq API key is stored in Chrome's local storage (`chrome.storage.sync`) on your machine only. It is never hardcoded in the source and never sent anywhere except directly to Groq's API. Safe to push this repo to GitHub as-is.
-
----
-
-## Publishing to Chrome Web Store
-
-To make the extension publicly installable:
-
-1. Pay the one-time **$5 developer registration fee** at [chrome.google.com/webstore/devconsole](https://chrome.google.com/webstore/devconsole)
-2. Zip the extension folder
-3. Submit for Google review (takes a few days)
-4. Once approved, anyone can install it from the store — no developer mode needed
-
----
-
-## License
-
-MIT
